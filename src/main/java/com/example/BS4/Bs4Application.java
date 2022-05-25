@@ -25,22 +25,13 @@ public class Bs4Application {
 	}
 
 	@Bean
-	@Qualifier(value = "Perfil1")
-	@Profile("perfil1")
-	Perfiles getProfile1()
+	@Qualifier(value = "Perfil")
+	@Profile("perfil")
+	Perfiles getProfile()
 	{
 		if (activeProfile.equals("perfil1")){
 			return new perfil1();
 		}
 		return new perfil2();
 	}
-
-	/*@Bean
-	@Qualifier(value = "Perfil2")
-	@Profile("perfil2")
-	Perfiles getProfile2()
-	{
-		return new perfil2();
-	}*/
-
 }
