@@ -27,8 +27,7 @@ public class Bs4Application {
 	@Bean
 	@Qualifier(value = "Perfil")
 	@Profile("perfil")
-	Perfiles getProfile()
-	{
+	Perfiles getProfile(){
 		if (activeProfile.equals("perfil1")){
 			return new perfil1();
 		}
